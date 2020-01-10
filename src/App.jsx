@@ -16,7 +16,7 @@ class App extends React.Component {
   componentDidMount = () => {
     const text = createGeometryText();
     const start = init(text);
-    const viewer = document.getElementById('viewer');
+    const { viewer } = this.refs;
     viewer.appendChild(start.renderer.domElement);
     const { renderer, scene, camera } = start;
     this.setState({
